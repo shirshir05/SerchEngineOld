@@ -17,7 +17,8 @@ public class Parse {
         int endIndex = document.indexOf("</TEXT>");
         String textOnly = document.substring(startIndex+6,endIndex);//gets the text written between the <TEXT> tags
         try {
-            String [][] listOfPersons = tokenizingAccordingToSubject(textOnly, "/models/en-ner-person.bin");
+          //  String [][] listOfPersons = tokenizingAccordingToSubject(textOnly, "/models/en-ner-person.bin");
+            String[][]percentages = tokenizingAccordingToSubject(textOnly,"/models/en-ner-percentage.bin");
         } catch (Exception e) {
             e.printStackTrace();
         }
